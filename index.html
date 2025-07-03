@@ -1,6 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="id">
   <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio Gisya</title>
@@ -1572,7 +1574,72 @@ body {
         max-width: 800px;
         margin: auto;
       }
-    </style>
+    
+/* === RESPONSIVE SETTINGS === */
+@media screen and (max-width: 1024px) {
+  .nama h2, .nama h3, .nama h4, .nama h5 {
+    font-size: 6vw;
+    text-align: center;
+    left: 0 !important;
+    bottom: 0 !important;
+  }
+
+  .nama p {
+    font-size: 4vw;
+    position: static;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .foto {
+    max-width: 90%;
+    position: static;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .keychain-wrapper1, .keychain-wrapper2 {
+    position: static;
+    transform: none;
+    margin: 20px auto;
+  }
+
+  .card {
+    position: static;
+    animation: none;
+    margin: 20px auto;
+  }
+
+  .counter-section {
+    flex-direction: column;
+    transform: none;
+    top: 0;
+    left: 0;
+    margin: 40px auto;
+  }
+
+  .grafik img {
+    transform: none !important;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .contact-box {
+    width: 90% !important;
+    right: 0 !important;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .slider-container, .slider-container2, .slider-container3 {
+    width: 100% !important;
+    left: 0 !important;
+    right: 0;
+  }
+}
+
+</style>
   </head>
   <body>
     <!-- NAVIGATION -->
