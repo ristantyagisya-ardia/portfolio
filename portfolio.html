@@ -66,7 +66,7 @@ body {
       justify-content: space-between;
       box-shadow: 0 1vw 2vw rgba(0,0,0,0.15);
       position: relative;
-      z-index: 47;
+      z-index: 1222;
     }
 
     .nav-links {
@@ -1132,6 +1132,10 @@ footer {
 
       /* Responsive Media Queries */
 @media (min-width: 0px) and (max-width: 768px) {
+   section {
+    scroll-margin-top: 80px; /* misal navbar lebih besar di mobile */
+  }
+  
   nav {
     max-width: 90%;
     padding: 1vw 2vw;
@@ -1270,7 +1274,7 @@ footer {
     margin-right: 8vw;
   }
     .phone-img {
-    max-width: 50vw;
+    max-width: 70vw;
     left: 20vw;
     position: relative;
     bottom: 160vw;
@@ -1302,8 +1306,8 @@ footer {
   }
 
   .flip-card {
-    width: 50vw;
-    height: 60vw;
+    width: 35vw;
+    height: 50vw;
     margin-bottom: 8vw;
   }
 
@@ -1325,20 +1329,20 @@ footer {
   }
 
   .card-full-img1 {
-    width: 100%;
-    height: 75vw;
+    width: 115%;
+    height: 65vw;
     border-radius: 4vw;
   }
 
   .card-full-img2 {
-    width: 200%;
-    height: 80vw;
+    width: 130%;
+    height: 60vw;
     border-radius: 8vw;
   }
     .slider-container2 {
     width: 300vw;
     left: -40vw;
-    bottom: 112vw;
+    bottom: 152vw;
     transform: rotate(-1deg);
   }
 
@@ -1347,7 +1351,7 @@ footer {
     margin-right: 2rem;
   }
     .counter-section {
-    transform: translateY(-130vw);
+    transform: translateY(-180vw);
     max-width: 80vw;
     flex-direction: column;
     gap: 5vw;
@@ -1355,7 +1359,7 @@ footer {
   }
 
   .counter-box {
-    min-width: 60vw;
+    min-width: 40vw;
   }
 
   .number {
@@ -1379,7 +1383,7 @@ footer {
 
   .container-toolstext {
     font-size: 4vw;
-    bottom: 120vw !important;
+    margin-bottom: 284vw !important;
     right: 0;
     text-align: center;
   }
@@ -1394,8 +1398,8 @@ footer {
   .item {
     width: 15vw;
     height: 15vw;
-    bottom: 90vw;
-    left: 0;
+    bottom: 10vw;
+    left: 10vw;
   }
 
   .item img {
@@ -1409,11 +1413,11 @@ footer {
 
   .grafik img {
     width: 60vw;
-    transform: translate(1vw, -120vw);
+    transform: translate(6vw, -320vw);
     bottom: 30vw;
   }
   .slider-container3 {
-    top: 580px;
+    top: 430px;
     right: 20px;
     width: 200vw;
     transform: rotate(0deg);
@@ -1426,14 +1430,14 @@ footer {
     margin-right: 2rem;
   }
     .judulproyek h2 {
-    font-size: 5vw;
+    font-size: 3vw;
     height: auto;
     padding: 2vw 0;
-    margin-top: 80vw;
+    padding-top: 30vw;
   }
 
   .kotak {
-    width: 80vw;
+    width: 40vw;
     height: auto;
     padding: 4vw;
   }
@@ -1453,7 +1457,7 @@ footer {
   }
   
 .halaman-proyek {
-    padding: 6vw 4vw;
+    padding: 6vw 2vw;
     margin-top: 240vw;
   }
 
@@ -1535,9 +1539,10 @@ footer {
   }
    .marquee-wrapper {
     gap: 4vw;
-    margin-top: 164vw;
+    padding-top: 17vw;
     right: 2vw;
     max-width: 100%;
+    scroll-margin-top: 1500px;
   }
 
   .marquee-track a {
@@ -1564,7 +1569,6 @@ footer {
     width: 90vw;
     max-width: 95vw;
     border-radius: 4vw;
-   scroll-margin-top: 1200px;
   }
 
   .contact-box h2 {
