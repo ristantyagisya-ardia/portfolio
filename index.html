@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio Gisya</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Kapakana&family=Passion+One&family=Poppins&display=swap" rel="stylesheet">
 
     <style>
@@ -911,6 +912,8 @@ body {
 .video-container {
   max-width: 32vw;
   height: auto;
+   position: relative;
+    overflow: visible;
 }
 
 video {
@@ -935,14 +938,17 @@ video {
   border-radius: 50%;
   cursor: pointer;
   transition: 0.3s;
+  z-index: 1000;
 }
 
 .play-button:hover {
   background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
 }
 
 .play-button.hidden {
   display: none;
+  z-index: 1000;
 }
 
 .video-title {
@@ -1161,7 +1167,7 @@ footer {
   .nama h3 {
     font-size: 12vw;
     position: relative !important;
-    left: 30vw !important;
+    left: 40vw !important;
     top: -32vw !important;
   }
   .nama h4, .nama h5 {
@@ -1515,11 +1521,13 @@ footer {
 
   .video-container {
     max-width: 100%;
+     position: relative;
   }
 
   .play-button {
     font-size: 5vw;
     padding: 4vw;
+    z-index: 1000;
   }
 
   .video-title {
@@ -1934,11 +1942,13 @@ footer {
 
   .konten-item h4 {
     font-size: 2vw;
+    z-index: 1000;
   }
 
   .play-button {
     font-size: 3vw;
     padding: 2vw;
+    z-index: 1000;
   }
 
   .video-title {
@@ -2615,24 +2625,26 @@ if (counterSection) {
       window.scrollTo({ top: proyek.offsetTop, behavior: 'smooth' });
     }
 
-      const video = document.getElementById("myVideo");
-  const playBtn = document.getElementById("playBtn");
+const video = document.getElementById("myVideo");
+const playBtn = document.getElementById("playBtn");
 
-  playBtn.addEventListener("click", function () {
-    video.play();
+playBtn.addEventListener("click", function () {
+  video.play().then(() => {
     playBtn.classList.add("hidden");
+  }).catch(err => {
+    console.error("Gagal memulai video:", err);
   });
-
-  video.addEventListener("pause", function () {
-    playBtn.classList.remove("hidden");
-  });
-
-  video.addEventListener("ended", function () {
-  video.currentTime = 0; // kembali ke awal
-  playBtn.classList.remove("hidden");
-  video.load(); // reload agar poster muncul kembali
 });
 
+video.addEventListener("pause", function () {
+  playBtn.classList.remove("hidden");
+});
+
+video.addEventListener("ended", function () {
+  video.currentTime = 0;
+  video.load(); // jika kamu ingin poster muncul kembali
+  playBtn.classList.remove("hidden");
+});
 
 </script>
   </body>
