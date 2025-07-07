@@ -518,7 +518,7 @@
 
       #keahlian {
         
-        height: 750px;
+        min-height: 1950px;
         scroll-margin-top: 300px;
       }
       .slider-container2 {
@@ -613,43 +613,11 @@
       position: relative;
     }
 
-    .container-toolstext {
-      font-size: 1.3vw;
-      color: #ffffff;
-      position: relative !important;
-      bottom: 40vw !important;
-      left: 11vw;
-    }
-
     .item-row {
       display: flex;
       gap: 2vw;
     }
 
-    .item {
-      width: 5vw;
-      height: 5vw;
-      border-radius: 50%;
-      overflow: visible;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: blinkBorder 1.2s infinite alternate ease-in-out;
-      position: relative;
-      bottom: 30vw;
-      left: 10vw;
-    }
-
-    .item img {
-      width: 14vw;
-      height: 7vw;
-      object-fit: cover;
-      border-radius: 50%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
 
     @keyframes blinkBorder {
       0% {
@@ -682,7 +650,7 @@
     .grafik img {
       width: 25vw;
       max-width: 100%;
-      transform: translate(46vw, -73vw);
+      transform: translate(46vw, -63vw);
     }
 
 
@@ -1144,1419 +1112,125 @@
       }
 
       /* Responsive Media Queries */
-@media (max-width: 392px) {
-   section {
-    scroll-margin-top: 80px; /* misal navbar lebih besar di mobile */
-  }
-  #tentang-saya:nth-of-type(1) {
-        height: 105vw;
-      }
-  nav {
-    max-width: 90%;
-    padding: 1vw 2vw;
-    border-radius: 30px;
-    flex-direction: column;
-    align-items: center;
-    gap: 1px;
-  }
-  .logo {
-    font-size: 6vw;
-    margin-bottom: 2vw;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 2vw;
-    align-items: center;
-    margin-left: 0;
-  }
-  .nav-links a {
-    font-size: 4vw;
-  }
-  .nama {
-    font-size: 6vw;
-    margin-top: -20vw;
-    
-  }
-  .nama h2 {
-    font-size: 8vw;
-    position: relative !important;
-    right: 40vw !important;
-    top: -20vw !important;
-  }
-  .nama h3 {
-    font-size: 12vw;
-    position: relative !important;
-    left: 40vw !important;
-    top: -32vw !important;
-  }
-  .nama h4, .nama h5 {
-    font-size: 3vw;
-    position: relative !important;
-    left: 28vw !important;
-    bottom: 31vw !important;
-  }
-  .nama p {
-    font-size: 2.4vw;
-    max-width: 60vw;
-    position: relative !important;
-    left: 12vw !important;
-    bottom: 31vw !important;
-  }
-  .foto {
-    max-width: 75% !important;
-    position: relative !important;
-    top: 5vw !important;
-    left: -3vw !important;
-    z-index: 0;
-  }
-  
-   .keychain1 {
-    width: 10vw;
-    height: 10vw;
-    position: relative !important;
-    left: -22vw !important;
-    bottom: 31vw !important;
-    z-index: 75;
-  }
-  .keychain2 {
-    width: 10vw;
-    height: 10vw;
-    position: relative !important;
-    left: -5vw !important;
-    bottom: 31vw !important;
-    z-index: 75;
-  }
 
-  .ring1 {
-    width: 2vw;
-    height: 2vw;
-    position: relative !important;
-    left: -22vw !important;
-    bottom: 31vw !important;
-    z-index: 75;
-  }
-  .ring2 {
-    width: 2vw;
-    height: 2vw;
-    position: relative !important;
-    left: -5vw !important;
-    bottom: 31vw !important;
-    z-index: 75;
-  }
-  .chain-line1 {
-    height: 4vw;
-    position: relative !important;
-    left: -22vw !important;
-    bottom: 31vw !important;
-    z-index: 75;
-  }
-  .chain-line2 {
-    height: 4vw;
-    position: relative !important;
-    left: -5vw !important;
-    bottom: 31vw !important;
-    z-index: 75;
-  }
-  .font-kapakana {
-    font-size: 20px;
-    left: 20px;
-  }
-  .font-passion {
-    font-size: 32px;
-    top: 10px;
-    left: 20px;
-  }
-  .font-anton {
-    font-size: 20px;
-  }
-  .font-abril {
-    font-size: 20px;
-  }
-   .card {
-    width: 40vw !important;
-    right: -3vw;
-    bottom: 4vw !important;
-  }
-    .slider-container {
-    padding: 2vw 10vw;
-    bottom: 65vw;
-    right: 6vw;
-    
-  }
+.hide {
+  display: none !important;
+}
 
-  .slider-track span {
-    font-size: 4vw;
-    margin-right: 8vw;
-  }
-    .phone-img {
-    max-width: 70vw;
-    left: 20vw;
-    position: relative;
-    bottom: 30vw;
-  }
-  #tentang-saya:nth-of-type(2) {
-        min-height: 50px;
-      }
-    .hobi h2,
-  .hobi h3,
-  .hobi h4 {
-    font-size: 6vw;
-    bottom: 25vw;
-    left: 4vw;
-  }
-
-  .hobi-list {
-    font-size: 2.5vw;
-    bottom: 115vw;
-    left: 28vw;
-    max-width: 60%;
-  }
-   .ticket-1 {
-    max-width: 80vw;
-    bottom: 50vw;
-    left: 8vw;
-    transform: rotate(-2deg);
-  }
-  #tentang-saya:nth-of-type(3) {
-  
-        min-height: 230vw;
-        
-      }
-
-   .cards-section {
-    bottom: 160vw;
-    flex-direction: column;
-    padding: 5vw 2vw;
-  }
-
-  .flip-card {
-    width: 35vw;
-    height: 50vw;
-  }
-
-  .flip-card-front {
-    font-size: 4vw;
-  }
-
-  .timeline-entry h2 {
-    font-size: 4.5vw;
-  }
-
-  .timeline-entry h3 {
-    font-size: 3vw;
-  }
-
-  .timeline-entry .date,
-  .timeline-entry .detail {
-    font-size: 2.5vw;
-  }
-
-  .card-full-img1 {
-    width: 115%;
-    height: 65vw;
-    border-radius: 4vw;
-  }
-
-  .card-full-img2 {
-    width: 130%;
-    height: 60vw;
-    border-radius: 8vw;
-  }
-  #keahlian {
-    height: 120vw;
-      }
-    .slider-container2 {
-    width: 300vw;
-    left: -40vw;
-    bottom: 152vw;
-    transform: rotate(-1deg);
-  }
-
-  .slider-track2 span {
-    font-size: 1.2rem;
-    margin-right: 2rem;
-  }
-    .counter-section {
-    transform: translateY(-150vw);
-    max-width: 80vw;
-    flex-direction: column;
-    gap: 5vw;
-    left: 5vw;
-  }
-
-  .counter-box {
-    min-width: 40vw;
-  }
-
-  .number {
-    font-size: 8vw;
-  }
-
-  .percent {
-    font-size: 4vw;
-    margin-left: 1vw;
-  }
-
-  .desc {
-    font-size: 4vw;
-    margin-top: 2vw;
-  }
-
-  .desc2 {
-    font-size: 3.5vw;
-    margin-top: 2vw;
-  }
-
-  .container-toolstext {
-    font-size: 4vw;
-    bottom: 215vw !important;
-    left: 3vw !important;
-    text-align: center;
-  }
-
-  .item-row {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 4vw;
-  }
-
-  .item {
-    width: 15vw;
-    height: 15vw;
-    bottom: 190vw;
-    left: 5vw;
-  }
-
-  .item img {
-    width: 40vw;
-    height: 20vw;
-  }
-  
-    .grafik {
-    
-  }
-
-  .grafik img {
-    width: 60vw;
-    transform: translate(6vw, -220vw);
-    bottom: 30vw;
-  }
-  #proyek {
-      min-height: 190vw;
+@media screen and (max-width: 991px) {
+    .hide, .hide-tablet {
+        display: none !important;
     }
-  .slider-container3 {
-    top: 40px;
-    right: 20px;
-    width: 200vw;
-    transform: rotate(0deg);
-    position: relative;
-    justify-content: flex-start;
-  }
-
-  .slider-track3 span {
-    font-size: 1.2rem;
-    margin-right: 2rem;
-  }
-  
-    .judulproyek h2 {
-    font-size: 3vw;
-    height: auto;
-    padding: 2vw 0;
-    padding-top: 30vw;
-  }
-
-  .kotak {
-    width: 40vw;
-    height: auto;
-    padding: 4vw;
-  }
-
-  .kotak h3 {
-    font-size: 5vw;
-  }
-
-  .kotak h4 {
-    font-size: 3.5vw;
-    margin: 2vw 0;
-  }
-
-  .kotak button {
-    padding: 2vw 4vw;
-    font-size: 3.5vw;
-  }
-  
-.halaman-proyek {
-    padding: 6vw 2vw;
-    bottom: 110vw;
-  }
-
-  .btn-kembali {
-    padding: 2.5vw 4vw;
-    font-size: 3.5vw;
-    border-radius: 2vw;
-    gap: 2vw;
-    margin-bottom: 4vw;
-  }
-
-  .grid-konten {
-    grid-template-columns: 1fr;
-    gap: 4vw;
-  }
-
-  .konten-item,
-  .konten-itemsosmed,
-  .konten-itemlabel1,
-  .konten-itemlabel2,
-  .konten-itemlabel3,
-  .konten-itemposter1,
-  .konten-itemposter2,
-  .konten-itemproduk,
-  .video-container {
-    width: 90vw;
-    border-radius: 3vw;
-  }
-
-  .image-wrapper,
-  .image-wrappersosmed,
-  .image-wrapperlabel1,
-  .image-wrapperlabel2,
-  .image-wrapperlabel3,
-  .image-wrapperposter1,
-  .image-wrapperposter2,
-  .image-wrapperproduk {
-    width: 90%;
-    border-radius: 3vw 3vw 0 0;
-  }
-
-  .image-wrapper .deskripsi,
-  .image-wrappersosmed .deskripsi,
-  .image-wrapperlabel1 .deskripsi,
-  .image-wrapperlabel2 .deskripsi,
-  .image-wrapperlabel3 .deskripsi,
-  .image-wrapperposter1 .deskripsi,
-  .image-wrapperposter2 .deskripsi,
-  .image-wrapperproduk .deskripsi {
-    font-size: 3.5vw;
-    padding: 2vw;
-  }
-
-  .konten-item h4,
-  .konten-itemsosmed h4,
-  .konten-itemlabel1 h4,
-  .konten-itemlabel2 h4,
-  .konten-itemlabel3 h4,
-  .konten-itemposter1 h4,
-  .konten-itemposter2 h4,
-  .konten-itemproduk h4 {
-    font-size: 4vw;
-    top: 1vw;
-  }
-
-  .video-container {
-    max-width: 100%;
-     position: relative;
-  }
-
-  .play-button {
-    font-size: 5vw;
-    padding: 4vw;
-    z-index: 1000;
-  }
-
-  .video-title {
-    font-size: 3.5vw;
-  }
-  #kontak {
-      min-height: 150vw;
+}
+  @media screen and (max-width: 767px) {
+    .hide-mobile-landscape{
+      display: none !important;
     }
-   .marquee-wrapper {
-    gap: 4vw;
-    padding-top: 17vw;
-    right: 2vw;
-    max-width: 100%;
-    scroll-margin-top: 1500px;
-  }
-
-  .marquee-track a {
-    margin: 1vw 2vw;
-    padding: 2vw 4vw;
-    font-size: 3vw;
-    border-radius: 6vw;
-  }
-   .marquee-wrapper {
-    gap: 4vw;
-    bottom: 4vw;
-    right: 2vw;
-  }
-
-  .marquee-track a {
-    margin: 1vw 2vw;
-    padding: 2vw 4vw;
-    font-size: 3vw;
-    border-radius: 6vw;
-  }
-  .contact-box {
-    padding: 6vw 4vw;
-    right: 0;
-    width: 90vw;
-    max-width: 95vw;
-    border-radius: 4vw;
-  }
-
-  .contact-box h2 {
-    font-size: 6vw;
-    margin-bottom: 4vw;
-  }
-
-  .contact-item {
-    padding: 3vw 4vw;
-    gap: 3vw;
-    border-radius: 3vw;
-    margin: 3vw 0;
-  }
-
-  .contact-item img {
-    width: 6vw;
-    height: 6vw;
-  }
-
-  .contact-item a {
-    font-size: 4vw;
-  }
-   footer {
-    padding: 5vw;
-    text-align: center;
-  }
-
-  .scroll-top-btn {
-    bottom: 4vw;
-    left: 4vw;
-    padding: 2.5vw 4vw;
-    font-size: 4vw;
-    gap: 2vw;
-    border-radius: 5vw;
-  }
-
-  .scroll-top-btn svg {
-    width: 4vw;
-    height: 4vw;
-  }
-
-  .footer-text {
-    font-size: 4vw;
-    padding-top: 5vw;
-  }
-
-  h2 {
-    font-size: 6vw;
-  }
-
-  p {
-    font-size: 4vw;
-    padding: 0 4vw;
-  }
+}
+  @media screen and (max-width: 479px) {
+    .hide-mobile{
+      display: none !important;
+    }
+}
+ 
+.margin-0 {
+  margin: 0rem !important;
+}
+  
+.padding-0 {
+  padding: 0rem !important;
 }
 
-@media (min-width: 393px) and (max-width: 768px) {
-   section {
-    scroll-margin-top: 80px; /* misal navbar lebih besar di mobile */
-  }
-  
-  nav {
-    max-width: 90%;
-    padding: 1vw 2vw;
-    border-radius: 30px;
-    flex-direction: column;
-    align-items: center;
-    gap: 1px;
-  }
-  .logo {
-    font-size: 6vw;
-    margin-bottom: 2vw;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 2vw;
-    align-items: center;
-    margin-left: 0;
-  }
-  .nav-links a {
-    font-size: 4vw;
-  }
-  .nama {
-    font-size: 6vw;
-    margin-top: -20vw;
-    
-  }
-  .nama h2 {
-    font-size: 8vw;
-    position: relative !important;
-    right: 40vw !important;
-    top: -20vw !important;
-  }
-  .nama h3 {
-    font-size: 12vw;
-    position: relative !important;
-    left: 40vw !important;
-    top: -32vw !important;
-  }
-  .nama h4, .nama h5 {
-    font-size: 3vw;
-    position: relative !important;
-    left: 28vw !important;
-    bottom: 31vw !important;
-  }
-  .nama p {
-    font-size: 2.4vw;
-    max-width: 60vw;
-    position: relative !important;
-    left: 12vw !important;
-    bottom: 31vw !important;
-  }
-  .foto {
-    max-width: 75% !important;
-    position: relative !important;
-    top: 5vw !important;
-    left: -3vw !important;
-    z-index: 0;
-  }
-  
-   .keychain1 {
-    width: 10vw;
-    height: 10vw;
-    position: relative !important;
-    left: -22vw !important;
-    bottom: 31vw !important;
-    z-index: 75;
-  }
-  .keychain2 {
-    width: 10vw;
-    height: 10vw;
-    position: relative !important;
-    left: -5vw !important;
-    bottom: 31vw !important;
-    z-index: 75;
-  }
-
-  .ring1 {
-    width: 2vw;
-    height: 2vw;
-    position: relative !important;
-    left: -22vw !important;
-    bottom: 31vw !important;
-    z-index: 75;
-  }
-  .ring2 {
-    width: 2vw;
-    height: 2vw;
-    position: relative !important;
-    left: -5vw !important;
-    bottom: 31vw !important;
-    z-index: 75;
-  }
-  .chain-line1 {
-    height: 4vw;
-    position: relative !important;
-    left: -22vw !important;
-    bottom: 31vw !important;
-    z-index: 75;
-  }
-  .chain-line2 {
-    height: 4vw;
-    position: relative !important;
-    left: -5vw !important;
-    bottom: 31vw !important;
-    z-index: 75;
-  }
-  .font-kapakana {
-    font-size: 20px;
-    left: 20px;
-  }
-  .font-passion {
-    font-size: 32px;
-    top: 10px;
-    left: 20px;
-  }
-  .font-anton {
-    font-size: 20px;
-  }
-  .font-abril {
-    font-size: 20px;
-  }
-   .card {
-    width: 40vw !important;
-    right: -3vw;
-    bottom: 4vw !important;
-  }
-    .slider-container {
-    padding: 2vw 10vw;
-    bottom: 65vw;
-    right: 6vw;
-    
-  }
-
-  .slider-track span {
-    font-size: 4vw;
-    margin-right: 8vw;
-  }
-    .phone-img {
-    max-width: 70vw;
-    left: 20vw;
-    position: relative;
-    bottom: 160vw;
-  }
-    .hobi h2,
-  .hobi h3,
-  .hobi h4 {
-    font-size: 6vw;
-    bottom: 45vw;
-    left: 4vw;
-  }
-
-  .hobi-list {
-    font-size: 2.5vw;
-    bottom: 130vw;
-    left: 28vw;
-    max-width: 60%;
-  }
-   .ticket-1 {
-    max-width: 80vw;
-    bottom: 50vw;
-    left: 8vw;
-    transform: rotate(-2deg);
-  }
-   .cards-section {
-    bottom: 160vw;
-    flex-direction: column;
-    padding: 5vw 2vw;
-  }
-
-  .flip-card {
-    width: 35vw;
-    height: 50vw;
-    margin-bottom: 8vw;
-  }
-
-  .flip-card-front {
-    font-size: 4vw;
-  }
-
-  .timeline-entry h2 {
-    font-size: 4.5vw;
-  }
-
-  .timeline-entry h3 {
-    font-size: 3vw;
-  }
-
-  .timeline-entry .date,
-  .timeline-entry .detail {
-    font-size: 2.5vw;
-  }
-
-  .card-full-img1 {
-    width: 115%;
-    height: 65vw;
-    border-radius: 4vw;
-  }
-
-  .card-full-img2 {
-    width: 130%;
-    height: 60vw;
-    border-radius: 8vw;
-  }
-    .slider-container2 {
-    width: 300vw;
-    left: -40vw;
-    bottom: 152vw;
-    transform: rotate(-1deg);
-  }
-
-  .slider-track2 span {
-    font-size: 1.2rem;
-    margin-right: 2rem;
-  }
-    .counter-section {
-    transform: translateY(-180vw);
-    max-width: 80vw;
-    flex-direction: column;
-    gap: 5vw;
-    left: 5vw;
-  }
-
-  .counter-box {
-    min-width: 40vw;
-  }
-
-  .number {
-    font-size: 8vw;
-  }
-
-  .percent {
-    font-size: 4vw;
-    margin-left: 1vw;
-  }
-
-  .desc {
-    font-size: 4vw;
-    margin-top: 2vw;
-  }
-
-  .desc2 {
-    font-size: 3.5vw;
-    margin-top: 2vw;
-  }
-
-  .container-toolstext {
-    font-size: 4vw;
-    margin-bottom: 284vw !important;
-    right: 0;
-    text-align: center;
-  }
-
-  .item-row {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 4vw;
-  }
-
-  .item {
-    width: 15vw;
-    height: 15vw;
-    bottom: 10vw;
-    left: 10vw;
-  }
-
-  .item img {
-    width: 40vw;
-    height: 20vw;
-  }
-  
-    .grafik {
-    
-  }
-
-  .grafik img {
-    width: 60vw;
-    transform: translate(6vw, -320vw);
-    bottom: 30vw;
-  }
-  .slider-container3 {
-    top: 430px;
-    right: 20px;
-    width: 200vw;
-    transform: rotate(0deg);
-    position: relative;
-    justify-content: flex-start;
-  }
-
-  .slider-track3 span {
-    font-size: 1.2rem;
-    margin-right: 2rem;
-  }
-    .judulproyek h2 {
-    font-size: 3vw;
-    height: auto;
-    padding: 2vw 0;
-    padding-top: 30vw;
-  }
-
-  .kotak {
-    width: 40vw;
-    height: auto;
-    padding: 4vw;
-  }
-
-  .kotak h3 {
-    font-size: 5vw;
-  }
-
-  .kotak h4 {
-    font-size: 3.5vw;
-    margin: 2vw 0;
-  }
-
-  .kotak button {
-    padding: 2vw 4vw;
-    font-size: 3.5vw;
-  }
-  
-.halaman-proyek {
-    padding: 6vw 2vw;
-    margin-top: 240vw;
-  }
-
-  .btn-kembali {
-    padding: 2.5vw 4vw;
-    font-size: 3.5vw;
-    border-radius: 2vw;
-    gap: 2vw;
-    margin-bottom: 4vw;
-  }
-
-  .grid-konten {
-    grid-template-columns: 1fr;
-    gap: 4vw;
-  }
-
-  .konten-item,
-  .konten-itemsosmed,
-  .konten-itemlabel1,
-  .konten-itemlabel2,
-  .konten-itemlabel3,
-  .konten-itemposter1,
-  .konten-itemposter2,
-  .konten-itemproduk,
-  .video-container {
-    width: 90vw;
-    border-radius: 3vw;
-  }
-
-  .image-wrapper,
-  .image-wrappersosmed,
-  .image-wrapperlabel1,
-  .image-wrapperlabel2,
-  .image-wrapperlabel3,
-  .image-wrapperposter1,
-  .image-wrapperposter2,
-  .image-wrapperproduk {
-    width: 90%;
-    border-radius: 3vw 3vw 0 0;
-  }
-
-  .image-wrapper .deskripsi,
-  .image-wrappersosmed .deskripsi,
-  .image-wrapperlabel1 .deskripsi,
-  .image-wrapperlabel2 .deskripsi,
-  .image-wrapperlabel3 .deskripsi,
-  .image-wrapperposter1 .deskripsi,
-  .image-wrapperposter2 .deskripsi,
-  .image-wrapperproduk .deskripsi {
-    font-size: 3.5vw;
-    padding: 2vw;
-  }
-
-  .konten-item h4,
-  .konten-itemsosmed h4,
-  .konten-itemlabel1 h4,
-  .konten-itemlabel2 h4,
-  .konten-itemlabel3 h4,
-  .konten-itemposter1 h4,
-  .konten-itemposter2 h4,
-  .konten-itemproduk h4 {
-    font-size: 4vw;
-    top: 1vw;
-  }
-
-  .video-container {
-    max-width: 100%;
-     position: relative;
-  }
-
-  .play-button {
-    font-size: 5vw;
-    padding: 4vw;
-    z-index: 1000;
-  }
-
-  .video-title {
-    font-size: 3.5vw;
-  }
-   .marquee-wrapper {
-    gap: 4vw;
-    padding-top: 17vw;
-    right: 2vw;
-    max-width: 100%;
-    scroll-margin-top: 1500px;
-  }
-
-  .marquee-track a {
-    margin: 1vw 2vw;
-    padding: 2vw 4vw;
-    font-size: 3vw;
-    border-radius: 6vw;
-  }
-   .marquee-wrapper {
-    gap: 4vw;
-    bottom: 4vw;
-    right: 2vw;
-  }
-
-  .marquee-track a {
-    margin: 1vw 2vw;
-    padding: 2vw 4vw;
-    font-size: 3vw;
-    border-radius: 6vw;
-  }
-  .contact-box {
-    padding: 6vw 4vw;
-    right: 0;
-    width: 90vw;
-    max-width: 95vw;
-    border-radius: 4vw;
-  }
-
-  .contact-box h2 {
-    font-size: 6vw;
-    margin-bottom: 4vw;
-  }
-
-  .contact-item {
-    padding: 3vw 4vw;
-    gap: 3vw;
-    border-radius: 3vw;
-    margin: 3vw 0;
-  }
-
-  .contact-item img {
-    width: 6vw;
-    height: 6vw;
-  }
-
-  .contact-item a {
-    font-size: 4vw;
-  }
-   footer {
-    padding: 5vw;
-    text-align: center;
-  }
-
-  .scroll-top-btn {
-    bottom: 4vw;
-    left: 4vw;
-    padding: 2.5vw 4vw;
-    font-size: 4vw;
-    gap: 2vw;
-    border-radius: 5vw;
-  }
-
-  .scroll-top-btn svg {
-    width: 4vw;
-    height: 4vw;
-  }
-
-  .footer-text {
-    font-size: 4vw;
-    padding-top: 5vw;
-  }
-
-  h2 {
-    font-size: 6vw;
-  }
-
-  p {
-    font-size: 4vw;
-    padding: 0 4vw;
-  }
+.spacing-clean {
+padding: 0rem !important;
+margin: 0rem !important;
 }
 
-@media (min-width: 769px) and (max-width: 1023px) {
-  nav {
-    padding: 3vw 5vw;
-    z-index: 121;
-  }
-  .logo {
-    font-size: 2.5vw;
-  }
-  .nav-links {
-    gap: 3vw;
-  }
-  .nav-links a {
-    font-size: 1.6vw;
-  }
-  .nama {
-    font-size: 5vw;
-    margin-top: -50vw;
-  }
-  .nama h2 {
-    font-size: 7vw;
-    bottom: 160vw !important;
-    
-  }
-  .nama h3 {
-    font-size: 8vw;
-    top: 10vw;
-  }
-  .nama h4, .nama h5 {
-    font-size: 3vw;
-    bottom: 13vw;
-    left: 45vw;
-  }
-  .nama p {
-    font-size: 2vw;
-    left: 25vw;
-    bottom: 10vw;
-    max-width: 40vw;
-  }
-  .foto {
-    max-width: 70%;
-    left: 12vw;
-    bottom: 3vw;
-  }
-  .keychain1 {
-    width: 15vw;
-    height: auto;
-    position: relative;
-    bottom: 10vw;
-  }
-    .keychain2 {
-    width: 15vw;
-    height: auto;
-    position: relative;
-    bottom: 22vw;
-    right: 2vw;
-  }
-
-  .ring1 {
-    width: 5vw;
-    height: 5vw;
-    position: relative;
-    bottom: 10vw;
-  }
-   .ring2 {
-    width: 2vw;
-    height: 2vw;
-    position: relative;
-    bottom: 22vw;
-    right: 2vw;
-  }
-
-  .chain-line1 {
-    height: 3vw;
-    position: relative;
-    bottom: 10vw;
-  }
-  .chain-line2 {
-    height: 3vw;
-    position: relative;
-    bottom: 22vw;
-    right: 2vw;
-  }
-  .font-kapakana {
-    font-size: 24px;
-    left: 40px;
-  }
-  .font-passion {
-    font-size: 42px;
-    top: 16px;
-    left: 30px;
-  }
-  .font-anton {
-    font-size: 28px;
-  }
-  .font-abril {
-    font-size: 24px;
-  }
-  .card {
-    width: 30vw;
-    right: -4vw;
-    top: 2vw;
-  }
-    .slider-container {
-    padding: 2.5vw 0;
-    bottom: 57vw;
-    right: 3vw;
-  }
-
-  .slider-track span {
-    font-size: 3vw;
-    margin-right: 6vw;
-  }
-
-  .phone-img {
-    max-width: 55vw;
-    left: 58vw;
-    bottom: 175vw;
-  }
-    .hobi h2 {
-    font-size: 5vw;
-    bottom: 59vw;
-    left: 6vw;
-  }
-
-  .hobi h3 {
-    font-size: 5vw;
-    bottom: 60vw;
-    left: 4vw;
-  }
-
-  .hobi h4 {
-    font-size: 5vw;
-    bottom: 60vw;
-    left: 6vw;
-  }
-
-  .hobi-list {
-    font-size: 2.5vw;
-    bottom: 140vw;
-    left: 40vw;
-    max-width: 60%;
-  }
-   .ticket-1 {
-    max-width: 70vw;
-    bottom: 58vw;
-    left: 12vw;
-    transform: rotate(-3deg);
-  }
-    .cards-section {
-    bottom: 215vw;
-    padding: 4vw 2vw;
-  }
-
-  .flip-card {
-    width: 40vw;
-    height: 50vw;
-    margin-bottom: 6vw;
-  }
-
-  .flip-card-front {
-    font-size: 2.5vw;
-  }
-
-  .timeline-entry h2 {
-    font-size: 3vw;
-  }
-
-  .timeline-entry h3 {
-    font-size: 2vw;
-  }
-
-  .timeline-entry .date,
-  .timeline-entry .detail {
-    font-size: 1.5vw;
-  }
-
-  .card-full-img1 {
-    width: 120%;
-    height: 65vw;
-    border-radius: 3vw;
-  }
-
-  .card-full-img2 {
-    width: 250%;
-    height: 121%;
-    border-radius: 6vw;
-  }
-    .slider-container2 {
-    width: 500vw;
-    left: -30vw;
-    bottom: 155vw;
-    transform: rotate(-1.5deg);
-  }
-
-  .slider-track2 span {
-    font-size: 1.5rem;
-    margin-right: 4rem;
-  }
-    .counter-section {
-    transform: translateY(-150vw);
-    max-width: 80vw;
-    padding-top: 8vw;
-    left: 7vw;
-    top: 20vw;
-    gap: 3vw;
-  }
-
-  .counter-box {
-    min-width: 30vw;
-  }
-
-  .number {
-    font-size: 5.5vw;
-  }
-
-  .percent {
-    font-size: 3vw;
-  }
-
-  .desc {
-    font-size: 2.8vw;
-  }
-
-  .desc2 {
-    font-size: 2.3vw;
-  }
-
-  .container-toolstext {
-    font-size: 2.8vw;
-    bottom: 150vw !important;
-    left: 12vw;
-  }
-
-  .item {
-    width: 8vw;
-    height: 8vw;
-    bottom: 132vw;
-    left: 12vw;
-  }
-
-  .item img {
-    width: 26vw;
-    height: 8vw;
-  }
-  
-    .grafik {
-    margin-top: 50vw;
-  }
-
-  .grafik img {
-    width: 60vw;
-    transform: translate(10vw, -170vw);
-  }
-    .slider-container3 {
-    bottom: 150px;
-    right: 100px;
-    width: 400vw;
-    transform: rotate(-1deg);
-  }
-
-  .slider-track3 span {
-    font-size: 1.6rem;
-    margin-right: 4rem;
-  }
-    .judulproyek h2 {
-    font-size: 3vw;
-    height: auto;
-  }
-
-  .kotak {
-    width: 35vw;
-    height: auto;
-    padding: 3vw;
-  }
-
-  .kotak h3 {
-    font-size: 2.5vw;
-  }
-
-  .kotak h4 {
-    font-size: 1.8vw;
-  }
-
-  .kotak button {
-    padding: 1.2vw 2.5vw;
-    font-size: 1.8vw;
-  }
-  .grid-konten {
-    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
-  }
-
-  .konten-item,
-  .konten-itemsosmed,
-  .konten-itemlabel1,
-  .konten-itemlabel2,
-  .konten-itemlabel3,
-  .konten-itemposter1,
-  .konten-itemposter2,
-  .konten-itemproduk,
-  .video-container {
-    width: 40vw;
-    border-radius: 2vw;
-  }
-
-  .image-wrapper,
-  .image-wrappersosmed,
-  .image-wrapperlabel1,
-  .image-wrapperlabel2,
-  .image-wrapperlabel3,
-  .image-wrapperposter1,
-  .image-wrapperposter2,
-  .image-wrapperproduk {
-    width: 85%;
-  }
-
-  .image-wrapper .deskripsi {
-    font-size: 1.8vw;
-  }
-
-  .konten-item h4 {
-    font-size: 2vw;
-    z-index: 1000;
-  }
-
-  .play-button {
-    font-size: 3vw;
-    padding: 2vw;
-    z-index: 1000;
-  }
-
-  .video-title {
-    font-size: 2vw;
-  }
-  .marquee-wrapper {
-    gap: 3vw;
-    bottom: 5vw;
-    right: 4vw;
-  }
-
-  .marquee-track a {
-    margin: 0.8vw 1.5vw;
-    padding: 1.5vw 3vw;
-    font-size: 2vw;
-    border-radius: 4vw;
-  }
-  .contact-box {
-    padding: 4vw 3vw;
-    right: -1vw;
-    width: 85vw;
-    max-width: 85vw;
-    border-radius: 2.5vw;
-  }
-
-  .contact-box h2 {
-    font-size: 4vw;
-    margin-bottom: 3vw;
-  }
-
-  .contact-item {
-    padding: 2vw 3vw;
-    gap: 2vw;
-    border-radius: 2vw;
-    margin: 2vw 0;
-  }
-
-  .contact-item img {
-    width: 4vw;
-    height: 4vw;
-  }
-
-  .contact-item a {
-    font-size: 2.2vw;
-  }
-  footer {
-    padding: 4vw;
-  }
-
-  .scroll-top-btn {
-    bottom: 3vw;
-    left: 3vw;
-    padding: 1.8vw 3.5vw;
-    font-size: 2vw;
-    gap: 1.2vw;
-    border-radius: 4vw;
-  }
-
-  .scroll-top-btn svg {
-    width: 2vw;
-    height: 2vw;
-  }
-
-  .footer-text {
-    font-size: 2.3vw;
-    padding-top: 3vw;
-  }
-
-  h2 {
-    font-size: 4vw;
-  }
-
-  p {
-    font-size: 2vw;
-    padding: 0 3vw;
-  }
+.margin-top {
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
 }
+
+.padding-top {
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+  
+.margin-right {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-right {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+.margin-bottom {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+
+.padding-bottom {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+.margin-left {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+  
+.padding-left {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+  
+.margin-horizontal {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+
+.padding-horizontal {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+
+.margin-vertical {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+  
+.padding-vertical {
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+
+/* Apply "..." at 100% width */
+.truncate-width { 
+		width: 100%; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+/* Removes native scrollbar */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none; 
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
 
     </style>
   </head>
@@ -2744,29 +1418,9 @@
       <div class="desc">Editing</div>
       <div class="desc2">Mengolah gambar dan elemen visual agar lebih tajam, bersih, dan komunikatif — mulai dari retouching foto produk hingga penyesuaian warna dan komposisi desain.</div>
     </div>
+    </div>
+    </div>
   </section>
-
-            <div class="container-tools">
-        <!-- Kiri -->
-        <div class="left">
-        <div class="item-row">
-      <div class="item"><img src="img/gmail.png" alt="Gambar 1" /></div>
-      <div class="item"><img src="img/drive.png" alt="Gambar 2" /></div>
-      <div class="item"><img src="img/google2.png" alt="Gambar 3" /></div>
-      <div class="item"><img src="img/google3.png" alt="Gambar 4" /></div>
-    </div>
-        <div class="container-toolstext">
-          <h2>Google Workspace</h2>
-    </div>
-
-    <!-- Kanan -->
-     <div class="left">
-    <div class="grafik">
-      <img src="img/1.png" alt="Skill Software Chart" />
-    </div>
-  </div>
-    </div>
-    </section>
 
     <!-- SECTION 5 - MY PROJECT -->
 <section id="proyek">
