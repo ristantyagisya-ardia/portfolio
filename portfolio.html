@@ -93,7 +93,7 @@ section {
 /* === FOTO & NAMA === */
 .foto {
   flex: 1 1 200px;
-  max-width: 200px;
+  max-width: 250px;
   text-align: center;
 }
 
@@ -801,6 +801,26 @@ footer {
   .kotak {
     width: 100%;
   }
+}
+
+.hide {
+  display: none !important;
+}
+
+@media screen and (max-width: 991px) {
+    .hide, .hide-tablet {
+        display: none !important;
+    }
+}
+  @media screen and (max-width: 767px) {
+    .hide-mobile-landscape{
+      display: none !important;
+    }
+}
+  @media screen and (max-width: 479px) {
+    .hide-mobile{
+      display: none !important;
+    }
 }
  
 .margin-0 {
