@@ -8,19 +8,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Kapakana&family=Passion+One&family=Poppins&display=swap" rel="stylesheet">
 
     <style>
-      * {
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
 body {
   font-family: 'Poppins', sans-serif;
   background: #fff7f7;
   color: #333;
   line-height: 1.6;
   overflow-x: hidden;
+}
+.fade-in-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-text.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 img {
@@ -70,23 +80,90 @@ section {
   position: relative;
 }
 
+/* === SECTION - ABOUT === */
+#tentang-saya {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 6rem;
+}
+
 /* === FOTO & NAMA === */
-.foto img {
-  width: 250px;
-  border-radius: 50%;
-  margin: auto;
-  display: block;
-  box-shadow: 0 0 20px rgba(200, 29, 106, 0.3);
+.foto {
+  flex: 1 1 200px;
+  max-width: 250px;
+  text-align: center;
 }
 
 .nama {
   text-align: center;
-  margin-top: 2vw;
+  margin-top: 1vw;
 }
+.nama h2 {
+    font-size: 60px;
+      animation: fadeIn 1.5s ease forwards;
+       transform: translateY(30px); 
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+       .nama h3 {
+       font-size: 80px;
+      background: linear-gradient(90deg, #ff0576, #f3f2f2, #e7a0d2, #ff0576);
+      background-size: 300% auto;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: flow 3s linear infinite;             
+    }
+
+    .font-kapakana {
+      font-family: 'Kapakana', sans-serif;    
+    }
+
+    .font-passion {
+      font-family: 'Passion One', cursive;
+      text-transform: uppercase;
+    }
+
+    .font-anton {
+      font-family: 'Anton', sans-serif;
+    }
+
+    .font-abril {
+      font-family: 'Abril Fatface', serif;
+    }
+
+    @keyframes flow {
+      0% {
+        background-position: 0% center;
+      }
+      100% {
+        background-position: 300% center;
+      }
+    }
+    .nama h4 {
+      animation: slideInLeft 1s ease-out forwards;          
+    }
+
+    @keyframes slideInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
 
 .font-kapakana {
   font-size: 1.4rem;
-  color: #999;
+  color: #796262;
 }
 .font-passion {
   font-size: 3rem;
@@ -107,28 +184,31 @@ section {
   margin-right: auto;
 }
 
-/* === KEYCHAIN === */
-.keychain-wrapper1, .keychain-wrapper2 {
-  position: absolute;
-  top: 5vw;
-}
-.keychain1, .keychain2 {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid #c81d6a;
-}
-
 /* === CARD === */
 .card img {
-  width: 100%;
-  max-width: 400px;
-  margin: 2vw auto;
-  display: block;
-  border-radius: 1vw;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
+  position: absolute;
+  top: -1rem;
+  right: 1rem;
+  width: 350px;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  transition: background-color 0.5s ease;
+  z-index: 10;
+  animation: swing 3s ease-in-out infinite;
+    }
+      
+      @keyframes swing {
+        0% {
+          transform: rotate(2deg);
+        }
+        50% {
+          transform: rotate(-2deg);
+        }
+        100% {
+          transform: rotate(2deg);
+        }
+      }
+
 
 /* === SLIDER TEXT === */
 .slider-container, .slider-container2, .slider-container3 {
@@ -139,12 +219,20 @@ section {
   margin: 3vw 0;
 }
 
-.slider-track, .slider-track2, .slider-track3 {
+.slider-track {
   display: inline-block;
-  animation: marquee 20s linear infinite;
+  animation: marquee 55s linear infinite;
+}
+.slider-track2 {
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+}
+.slider-track3 {
+  display: inline-block;
+  animation: marquee 25s linear infinite;
 }
 
-.slider-track span {
+.slider-track span, .slider-track2 span, .slider-track3 span {
   margin: 0 2vw;
   font-size: 1.2rem;
   font-weight: bold;
@@ -162,7 +250,7 @@ section {
   margin-bottom: 2vw;
 }
 .hobi h2, .hobi h3, .hobi h4 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #c81d6a;
 }
 .hobi-list li {
@@ -173,9 +261,10 @@ section {
 }
 
 .ticket-1 img {
-  width: 250px;
+  width: 350px;
   display: block;
   margin: 0 auto 2vw;
+  transform: rotate(-7deg);
 }
 
 /* === FLIP CARD === */
@@ -190,6 +279,8 @@ section {
   width: 300px;
   height: 400px;
   perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 1s;
 }
 .flip-card-inner {
   position: relative;
@@ -210,18 +301,57 @@ section {
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-.flip-card-front {
-  background: #fff;
-}
+
 .flip-card-back {
   background: #ffdee9;
   transform: rotateY(180deg);
   padding: 2vw;
 }
-.timeline-entry {
-  margin-bottom: 1.5vw;
+
+.card-full-img1,
+.card-full-img2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
-.timeline-entry .date {
+
+/* Tambahan efek naik-turun saat berhenti */
+@keyframes float-up-down {
+  0%, 100% {
+    transform: translateY(0) rotateY(180deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateY(180deg);
+  }
+}
+
+.flip-card.flip-final .flip-card-inner {
+  transform: rotateY(180deg);
+  animation: float-up-down 2s ease-in-out infinite;
+}
+
+/* Awal animasi flip */
+.flip-card.flip-start .flip-card-inner {
+  animation: double-flip 2s ease forwards;
+}
+
+@keyframes double-flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.timeline-entry {
+  margin-bottom: 2.5vw;
+}
+.timline-entry .date {
   font-size: 0.9rem;
   color: #999;
 }
@@ -251,7 +381,31 @@ section {
   color: #555;
 }
 
+.counter-image {
+  margin-top: 3vw;
+  text-align: center;
+}
+
+.counter-image img {
+  max-width: 40%;
+  height: auto;
+  border-radius: 1vw;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+   transform: translateX(30%);
+}
+
+.counter-image img:hover {
+  transform: scale(1.02);
+}
+
 /* === PROYEK === */
+.judulproyek h2 {
+      font-size: 1.3vw;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      height: 8vw;
+    }
 .kotak-container {
   display: flex;
   flex-wrap: wrap;
@@ -260,13 +414,25 @@ section {
   margin-top: 3vw;
 }
 .kotak {
-  background: #fff;
-  border-radius: 1vw;
+  background: linear-gradient(145deg, #ffe1e1, #ffc2c2);
+  border-radius: 1.5vw;
   padding: 2vw;
   width: 300px;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 20px rgba(200, 29, 106, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.kotak:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(200, 29, 106, 0.3);
+}
+
+.kotak h3 {
+    font-size: 1.8vw;
+  }
+  .kotak h4 {
+    font-weight: normal;
+  }
 .kotak button {
   margin-top: 1vw;
   padding: 0.5vw 1vw;
@@ -276,6 +442,28 @@ section {
   border-radius: 0.5vw;
   cursor: pointer;
 }
+.btn-kembali {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5vw;
+  padding: 0.8vw 1.5vw;
+  background: linear-gradient(135deg, #c81d6a, #a90046);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 2vw;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(200, 29, 106, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-kembali:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(200, 29, 106, 0.3);
+  background: linear-gradient(135deg, #a90046, #c81d6a);
+}
+
 
 /* === HALAMAN PROYEK === */
 .halaman-proyek {
@@ -290,84 +478,316 @@ section {
   gap: 2vw;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-.image-wrapperlabel1, .image-wrapperlabel2, .image-wrapperlabel3,
-.image-wrapperposter1, .image-wrapperposter2 {
-  position: relative;
-  overflow: hidden;
-  border-radius: 1vw;
-}
-.image-wrapperlabel1 img, .image-wrapperlabel2 img, .image-wrapperlabel3 img,
-.image-wrapperposter1 img, .image-wrapperposter2 img {
-  width: 100%;
-  height: auto;
-}
+.play-button {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translate(80%, -50%);
+        font-size: 1.5vw;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 1.5vw;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+        z-index: 1000;
+      }
+
+      .play-button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+      }
+
+      .play-button.hidden {
+        display: none;
+        z-index: 1000;
+      }
+
 .deskripsi {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 1vw;
+  background: rgba(255, 255, 255, 0.9); /* semi transparan */
+  color: #333;
   font-size: 0.9rem;
-  color: #555;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
+.konten-item,
+      .konten-itemsosmed,
+      .konten-itemlabel1,
+      .konten-itemlabel2,
+      .konten-itemlabel3,
+      .konten-itemposter1,
+      .konten-itemposter2,
+      .konten-itemproduk,
+      .video-container {
+        background: #eceeef;
+        border-radius: 1vw;
+        text-align: center;
+        overflow: hidden;
+        padding-bottom: 1vw;
+        width: 18vw;
+        height: auto;
+      }
+
+      .image-wrapper,
+      .image-wrappersosmed,
+      .image-wrapperlabel1,
+      .image-wrapperlabel2,
+      .image-wrapperlabel3,
+      .image-wrapperposter1,
+      .image-wrapperposter2,
+      .image-wrapperproduk {
+        position: relative;
+        width: 105%;
+        overflow: hidden;
+        border-radius: 1vw 1vw 0 0;
+        margin: 1vw auto 0 auto;
+      }
+
+      .image-wrapper img,
+      .image-wrappersosmed img,
+      .image-wrapperlabel1 img,
+      .image-wrapperlabel2 img,
+      .image-wrapperlabel3 img,
+      .image-wrapperposter1 img,
+      .image-wrapperposter2 img,
+      .image-wrapperproduk img {
+        width: 100%;
+        display: block;
+        border-radius: 1vw 1vw 0 0;
+      }
+
+      .image-wrapper .deskripsi,
+      .image-wrappersosmed .deskripsi,
+      .image-wrapperlabel1 .deskripsi,
+      .image-wrapperlabel2 .deskripsi,
+      .image-wrapperlabel3 .deskripsi,
+      .image-wrapperposter1 .deskripsi,
+      .image-wrapperposter2 .deskripsi,
+      .image-wrapperproduk .deskripsi {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.7);
+        color: #fff;
+        padding: 1vw;
+        font-size: 1vw;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .image-wrapper:hover .deskripsi,
+      .image-wrappersosmed:hover .deskripsi,
+      .image-wrapperlabel1:hover .deskripsi,
+      .image-wrapperlabel2:hover .deskripsi,
+      .image-wrapperlabel3:hover .deskripsi,
+      .image-wrapperposter1:hover .deskripsi,
+      .image-wrapperposter2:hover .deskripsi,
+      .image-wrapperproduk:hover .deskripsi {
+        opacity: 1;
+      }
+
+      .konten-item h4,
+      .konten-itemsosmed h4,
+      .konten-itemlabel1 h4,
+      .konten-itemlabel2 h4,
+      .konten-itemlabel3 h4,
+      .konten-itemposter1 h4,
+      .konten-itemposter2 h4,
+      .konten-itemproduk h4 {
+        margin: 1vw 0 0.5vw;
+        font-size: 1.1vw;
+        position: relative;
+        top: 0.5vw;
+      }
+
+      .video-container {
+        max-width: 32vw;
+        height: auto;
+        position: relative;
+          overflow: visible;
+      }
+
+      video {
+        width: 100%;
+        display: block;
+        border-radius: 1vw;
+      }
+
+      .video-wrapper {
+        text-align: center;
+      }
+
+
+
 /* === KONTAK === */
-.contact-box {
-  background: #fff0f6;
-  padding: 3vw;
-  border-radius: 1vw;
-  margin-top: 3vw;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 1vw;
-  margin-top: 1vw;
-}
-.contact-item img {
-  width: 30px;
-  height: 30px;
-}
-.contact-item a {
-  color: #333;
-  text-decoration: none;
-}
+ .contact-box {
+        position: relative;
+        bottom: 0.7vw;
+        right: -1vw;
+        background: rgba(221, 43, 103, 0.822);
+        border-radius: 1.4vw;
+        padding: 2.5vw 2vw;
+        width: 90vw;
+        max-width: 80vw;
+        box-shadow: 0 0.6vw 2vw rgba(187, 32, 32, 0.5);
+        backdrop-filter: blur(1vw);
+        z-index: 1;
+      }
+
+      .contact-box h2 {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 2vw;
+        letter-spacing: 0.1vw;
+        font-size: 3vw;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+        margin: 1.4vw 0;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 1vw 1.4vw;
+        border-radius: 1vw;
+        transition: 0.3s ease;
+      }
+
+      .contact-item:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .contact-item img {
+        width: 2.4vw;
+        height: 2.4vw;
+        filter: drop-shadow(0 0 0.2vw #0005);
+      }
+
+      .contact-item a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.4vw;
+      }
+
+      .contact-item a:hover {
+        text-decoration: underline;
+      }
 
 /* === MARQUEE === */
 .marquee-wrapper {
-  overflow: hidden;
-  margin-bottom: 2vw;
-}
-.marquee {
-  white-space: nowrap;
-}
-.marquee-track {
-  display: inline-block;
-  animation: marquee 20s linear infinite;
-}
-.marquee a {
-  margin: 0 1vw;
-  text-decoration: none;
-  font-weight: bold;
-}
-.marquee .blue { color: #007BFF; }
-.marquee .pink { color: #FF1493; }
-.marquee .yellow { color: #FFD700; }
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        position: relative;
+        bottom: 6vw;
+        right: 11vw;
+      }
+
+      .marquee {
+        position: relative;
+        width: 100vw;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .marquee-track {
+        display: inline-flex;
+        width: max-content;
+      }
+
+      .marquee-track a {
+        display: inline-block;
+        margin: 0.6vw 1vw;
+        padding: 1vw 2vw;
+        border-radius: 3vw;
+        font-size: 1vw;
+        font-weight: 500;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        transition: transform 0.2s;
+      }
+
+      .marquee-track a:hover {
+        transform: scale(1.05);
+        text-decoration: underline;
+      }
+
+      /* Color Styles */
+      .blue { background-color: #b9d1e8; }
+      .yellow { background-color: #fffeca; }
+      .pink { background-color: #eb94c5; }
+
+      /* Animations */
+      @keyframes scroll-right {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0%); }
+      }
+
+      @keyframes scroll-left {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-50%); }
+      }
+
+      .marquee-right .marquee-track {
+        animation: scroll-right 30s linear infinite;
+      }
+
+      .marquee-left .marquee-track {
+        animation: scroll-left 30s linear infinite;
+      }
 
 /* === FOOTER === */
 footer {
-  background: #ffdee9;
-  padding: 2vw 5vw;
-  text-align: center;
-  color: #555;
-  margin-top: 4vw;
-}
-.scroll-top-btn {
-  background: #c81d6a;
-  border: none;
-  color: white;
-  padding: 0.5vw 1vw;
-  border-radius: 0.5vw;
-  cursor: pointer;
-  margin-bottom: 1vw;
-}
+        background-color: #fe36a4;
+        color: #bbb;
+        padding: 2vw;
+        position: relative;
+      }
+
+      .scroll-top-btn {
+        position: absolute;
+        bottom: 2vw;
+        left: 2vw;
+        background-color: #f5b700;
+        color: #000;
+        border: none;
+        padding: 1vw 1.6vw;
+        border-radius: 3vw;
+        font-size: 1vw;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 0.4vw 1vw rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        gap: 0.6vw;
+        transition: background 0.3s ease;
+      }
+
+      .scroll-top-btn:hover {
+        background-color: #ffd43b;
+      }
+
+      .scroll-top-btn svg {
+        width: 1.2vw;
+        height: 1.2vw;
+        fill: #000;
+      }
+
+      .footer-text {
+        text-align: center;
+        padding-top: 2vw;
+        font-size: 1.3vw;
+        color: #ffffff;
+      }
 
 /* === RESPONSIVE === */
 @media screen and (max-width: 768px) {
@@ -501,12 +921,139 @@ margin: 0rem !important;
     display: none;
 }
 
+.theme-toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #333;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle .icon {
+  position: absolute;
+  top: 50%; /* Posisi vertikal ke tengah */
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 16px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.theme-toggle .moon {
+  left: 4px;
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+.theme-toggle .sun {
+  right: 4px;
+  opacity: 0;
+  transform: translate(100%, -50%);
+}
+
+body.dark-mode .theme-toggle .moon {
+  opacity: 0;
+  transform: translate(-100%, -50%);
+}
+
+body.dark-mode .theme-toggle .sun {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+
+/* Aktifkan dark mode toggle */
+body.dark-mode .theme-toggle {
+  background-color: #ddd;
+}
+
+/* === DARK MODE STYLING === */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .navbar {
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #444;
+}
+
+body.dark-mode .nav-links a {
+  color: #f1f1f1;
+}
+
+body.dark-mode .section,
+body.dark-mode section {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .counter-box {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+body.dark-mode .card,
+body.dark-mode .flip-card-front,
+body.dark-mode .flip-card-back {
+  background-color: #222;
+  color: #eee;
+}
+
+body.dark-mode .slider-container,
+body.dark-mode .slider-container2,
+body.dark-mode .slider-container3 {
+  background: #1a1a1a;
+}
+
+body.dark-mode .slider-track span,
+body.dark-mode .slider-track2 span,
+body.dark-mode .slider-track3 span {
+  color: #f5c6ff;
+}
+
+body.dark-mode .marquee-track a {
+  color: #ddd;
+}
+
+body.dark-mode footer {
+  background-color: #1c1c1c;
+  color: #bbb;
+}
+
+body.dark-mode .scroll-top-btn {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-mode .kotak,
+body.dark-mode .contact-box {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  color: #f5f5f5;
+}
+
+
+
 
     </style>
   </head>
   <body>
     <!-- NAVIGATION -->
     <nav class="navbar">
+        <button class="theme-toggle" id="themeToggle">
+  <span class="icon moon">🌙</span>
+  <span class="icon sun">🌞</span>
+</button>
+
       <div class="logo">Ristantya Gisya Ardia</div>
       <ul class="nav-links">
         <li><a href="#tentang-saya">Tentang</a></li>
@@ -519,14 +1066,13 @@ margin: 0rem !important;
     <!-- SECTION 1 - ABOUT ME -->
     <section id="tentang-saya">
       <div class="foto">
-        <img src="img/Untitled-3.png" alt="Foto Profil" class="foto" />
+        <img src="img/bingkaift.png" alt="Foto Profil" class="foto" />
       </div>
 
       <div class="nama">
         <h2 class="font-kapakana">hallo, i'm </h2>
         <h3 class="font-passion">GISYA</h3>
-        <h4 class="font-anton">Supplier Label &</h4>
-        <h5 class="font-anton">Graphic Designer</h5>
+        <h4 class="font-anton">Supplier Label & Graphic Designer</h4>
         <p class="font-poppins">
           Supplier label sekaligus graphic designer yang berfokus pada solusi
           cetak kreatif dan fungsional. Menggabungkan keahlian produksi dengan
@@ -534,23 +1080,6 @@ margin: 0rem !important;
           menyeluruh.
         </p>
       </div>
-
-        <div class="keychain-wrapper1">
-    <div class="ring1"></div>
-    <div class="chain-line1"></div>
-    <div class="keychain1">
-      <img id="keychain-photo" src="img/ft1.jpeg" alt="Foto Keychain">
-    </div>
-  </div>
-
-          <div class="keychain-wrapper2">
-    <div class="ring2"></div>
-    <div class="chain-line2"></div>
-    <div class="keychain2">
-      <img id="keychain-photo" src="img/ft2.jpeg" alt="Foto Keychain">
-    </div>
-  </div>
-
 
       <div class="card">
         <img src="img/Untitled-1.png" class="card" />
@@ -565,6 +1094,14 @@ margin: 0rem !important;
           <span>Ristantya Gisya Ardia</span>
           <span>welcome to my portfolio</span>
           <span>Ristantya Gisya Ardia</span>
+          <span>welcome to my portfolio</span>
+          <span>Ristantya Gisya Ardia</span>
+          <span>welcome to my portfolio</span>
+          <span>Ristantya Gisya Ardia</span>
+          <span>welcome to my portfolio</span>
+          <span>Ristantya Gisya Ardia</span>
+          <span>welcome to my portfolio</span>
+          <span>Ristantya Gisya Ardia</span>
         </div>
       </div>
 
@@ -575,9 +1112,9 @@ margin: 0rem !important;
     <section id="tentang-saya">
       
         <div class= "hobi" >
-          <h2 class="font-abril">HOBI</h2>
-          <h3 class="font-abril">dan</h3>
-          <h4 class="font-abril">MINAT</h4>
+          <h2 class="font-abril" class="fade-in-text">HOBI</h2>
+          <h3 class="font-abril" class="fade-in-text">dan</h3>
+          <h4 class="font-abril"class="fade-in-text">MINAT</h4>
           </div>
         <div class="ticket-1">
            <img src="img/ticket.png" alt="ticket" class="ticket-1">
@@ -597,7 +1134,6 @@ margin: 0rem !important;
 
     <!-- SECTION 3 - PENDIDIKAN & PEKERJAAN -->
     <section id="tentang-saya">
-      <img src="img/hp--1.png" alt="Phone Podcast" class="phone-img" />
       <section class="cards-section" id="flip-section">
   <div class="container-card">
     <!-- Flip Card 1 -->
@@ -663,6 +1199,14 @@ margin: 0rem !important;
       <span>Desain</span>
       <span>Skills & Tools</span>
       <span>Branding</span>
+      <span>Editing</span>
+      <span>Desain</span>
+      <span>Skills & Tools</span>
+      <span>Branding</span>
+      <span>Editing</span>
+      <span>Desain</span>
+      <span>Skills & Tools</span>
+      <span>Branding</span>
 
     </div>
   </div>
@@ -691,12 +1235,21 @@ margin: 0rem !important;
     </div>
     </div>
   </section>
+ <div class="counter-image">
+  <img src="img/1.png" alt=" Tools Desain">
+</div>
 
     <!-- SECTION 5 - MY PROJECT -->
 <section id="proyek">
   <!-- Bagian Slider -->
   <div class="slider-container3">
     <div class="slider-track3">
+      <span>My Project</span>
+      <span>My Project</span>
+      <span>My Project</span>
+      <span>My Project</span>
+      <span>My Project</span>
+      <span>My Project</span>
       <span>My Project</span>
       <span>My Project</span>
       <span>My Project</span>
@@ -722,28 +1275,28 @@ margin: 0rem !important;
   <div class="kotak-container">
     <!-- Kotak 2 -->
     <div class="kotak">
-      <h3>Label</h3>
+      <h3 class="font-abril">LABEL</h3>
       <h4>(Label modern fokus pada brand identity yang kuat.)</h4>
       <button onclick="bukaProyek('label')">Lihat Proyek</button>
     </div>
 
     <!-- Kotak 3 -->
     <div class="kotak">
-      <h3>Desain Sosmed</h3>
+      <h3 class="font-abril">DESAIN SOSMED</h3>
       <h4>(Konten sosial media untuk meningkatkan branding )</h4>
       <button onclick="bukaProyek('sosmed')">Lihat Proyek</button>
     </div>
 
     <!-- Kotak 4 -->
     <div class="kotak">
-      <h3>Foto & Video</h3>
+      <h3 class="font-abril">FOTO & VIDEO</h3>
       <h4>(Fotografi dan cuplikan video pemasaran desain label dan dokumentasi kerja tim)</h4>
       <button onclick="bukaProyek('foto')">Lihat Proyek</button>
     </div>
     
     <!-- Kotak 5 -->
     <div class="kotak">
-      <h3>Poster</h3>
+      <h3 class="font-abril">POSTER</h3>
       <h4>(Poster digital dengan visual yang menarik dan informatif.)</h4>
       <button onclick="bukaProyek('poster')">Lihat Proyek</button>
     </div>
@@ -958,38 +1511,38 @@ margin: 0rem !important;
     sectionObserver.observe(section);
   });
 
-  // === Flip Card Scroll Animation (Halaman 2) ===
-  const flipSection = document.getElementById("flip-section");
-  const cards = document.querySelectorAll(".flip-card");
+const flipSection = document.getElementById("flip-section");
+const cards = document.querySelectorAll(".flip-card");
 
-  let isFlipping = false;
+let flipObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Reset animasi
+      cards.forEach(card => {
+        card.classList.remove("flip-final", "flip-start");
+        void card.offsetWidth; // force reflow
+        card.classList.add("flip-start");
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !isFlipping) {
-        isFlipping = true;
-        cards.forEach(card => {
-          card.classList.remove("show-back");
-          card.classList.add("flip-start");
-        });
-
+        // Setelah 2 detik (durasi animasi), ganti jadi 'flip-final'
         setTimeout(() => {
-          cards.forEach(card => {
-            card.classList.remove("flip-start");
-            card.classList.add("show-back");
-          });
-        }, 2000); // setelah 2 detik, tampil belakang dan mulai animasi float
+          card.classList.remove("flip-start");
+          card.classList.add("flip-final");
+        }, 2000);
+      });
+    } else {
+      // Reset semua jika keluar viewport
+      cards.forEach(card => {
+        card.classList.remove("flip-start", "flip-final");
+        card.querySelector(".flip-card-inner").style.transform = "rotateY(0deg)";
+      });
+    }
+  });
+}, {
+  threshold: 0.5
+});
 
-      } else if (!entry.isIntersecting) {
-        isFlipping = false;
-        cards.forEach(card => {
-          card.classList.remove("flip-start", "show-back");
-        });
-      }
-    });
-  }, { threshold: 0.5 });
+flipObserver.observe(flipSection);
 
-  observer.observe(flipSection);
 
   // === Counter Persen Berjalan Saat Scroll (ULANG SETIAP MASUK) ===
 const counters = document.querySelectorAll('.number');
@@ -1060,25 +1613,32 @@ if (counterSection) {
       });
     }
 
-        function bukaProyek(kategori) {
-      document.querySelectorAll('.halaman-proyek').forEach(sec => {
-        sec.classList.remove('active');
-      });
-      const id = 'halaman-' + kategori;
-      const target = document.getElementById(id);
-      if (target) {
-        target.classList.add('active');
-        window.scrollTo({ top: target.offsetTop, behavior: 'smooth' });
-      }
-    }
+       function bukaProyek(kategori) {
+  document.querySelectorAll('.halaman-proyek').forEach(sec => {
+    sec.classList.remove('active');
+  });
+  const id = 'halaman-' + kategori;
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.add('active');
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
 
-    function kembali() {
-      document.querySelectorAll('.halaman-proyek').forEach(sec => {
-        sec.classList.remove('active');
-      });
-      const proyek = document.getElementById('proyek');
-      window.scrollTo({ top: proyek.offsetTop, behavior: 'smooth' });
-    }
+
+   function kembali() {
+  // Tutup semua halaman proyek
+  document.querySelectorAll('.halaman-proyek').forEach(sec => {
+    sec.classList.remove('active');
+  });
+
+  // Scroll ke bagian kotak proyek
+  const proyekKotak = document.querySelector('.kotak-container');
+  if (proyekKotak) {
+    proyekKotak.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
 
 const video = document.getElementById("myVideo");
 const playBtn = document.getElementById("playBtn");
@@ -1100,6 +1660,43 @@ video.addEventListener("ended", function () {
   video.load(); // jika kamu ingin poster muncul kembali
   playBtn.classList.remove("hidden");
 });
+
+const textElements = document.querySelectorAll('.fade-in-text');
+
+const textObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible'); // agar bisa muncul lagi saat kembali
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+textElements.forEach(el => textObserver.observe(el));
+
+
+  const toggleBtn = document.getElementById('themeToggle');
+  const body = document.body;
+
+  // Cek simpanan tema
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    body.classList.add('dark-mode');
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+
+    // Simpan preferensi
+    if (body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
 
 </script>
   </body>
